@@ -1,0 +1,10 @@
+name: 'Assessment Poster'
+type: module
+description: 'Provides an endpoint with a CSS file attached and a custom template.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies: []
+
+twig:
+  namespaces:
+    assessment_poster: templates

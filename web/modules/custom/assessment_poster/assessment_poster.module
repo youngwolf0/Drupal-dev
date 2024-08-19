@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function assessment_poster_theme() {
+  return [
+    'assessment_poster_page' => [
+      'variables' => [
+        'columns' => [],
+      ],
+      'template' => 'assessment-poster-page',
+    ],
+  ];
+}

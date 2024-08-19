@@ -1,0 +1,7 @@
+assessment_poster.assessment1:
+  path: '/assessment1'
+  defaults:
+    _controller: '\Drupal\assessment_poster\Controller\AssessmentPosterController::content'
+    _title: 'Assessment 1'
+  requirements:
+    _permission: 'access content'

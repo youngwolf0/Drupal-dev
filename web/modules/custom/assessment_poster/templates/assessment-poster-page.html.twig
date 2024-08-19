@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Template for the assessment poster page.
+ */
+#}
+
+<div class="poster-paper white">
+  <div class="poster-title">
+    Literatur und Kulturelles Leben
+  </div>
+  <div class="poster-date">
+    Oktober - Dezember 1965
+  </div>
+  <div class="poster-container-wrapper">
+    <div class="poster-container">
+      {% for column in columns %}
+        <div class="column" style="flex: 0 0 {{ column.width }};">
+          {% for row in column.rows %}
+            <div class="row {{ row.color }}" style="height: {{ row.height }};"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+.poster-paper {
+  padding: 3%;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.2REM;
+}
+
+.poster-paper .poster-date {
+  margin-bottom: 4rem;
+}
+
+.poster-container-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-container-wrapper::before {
+  content: "Süddeutscher Rundfunk Stuttgart";
+  display: block;
+  font-size: 0.8REM;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  text-align: left;
+}
+
+.poster-container {
+  width: 100%;
+  aspect-ratio: 100 / 54;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.poster-container .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.poster-container .row {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Remove stacking on mobile */
+@media (max-width: 768px) {
+  .poster-container {
+    flex-direction: row; /* Keep rows in a row direction to prevent flat lines */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    flex-wrap: nowrap; /* Prevent wrapping to maintain layout */
+  }
+
+  .poster-container .column {
+    flex: 0 0 auto; /* Prevent columns from shrinking on mobile */
+  }
+
+  .poster-container .row {
+    height: auto; /* Ensure rows scale appropriately within the column */
+  }
+}
+
+.black {
+  background-color:#323846;
+}
+.grey {
+  background-color:#a8a0a2;
+}
+.brown {
+  background-color:#8d7b72;
+}
+.purple {
+  background-color:#6c537a;
+}
+.white {
+  background-color:#d5c4bc;
+}
+.pink {
+  background-color:#b769a1;
+}
+.dark_pink {
+  background-color:#b362a9;
+}
