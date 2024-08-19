@@ -1,0 +1,12 @@
+name: 'BPMN.iO for ECA'
+type: module
+description: 'BPMN modeller for ECA, integrated into Drupal''s admin UI.'
+core_version_requirement: ^10.3 || ^11
+package: ECA
+dependencies:
+  - eca:eca_modeller_bpmn (^2)
+
+# Information added by Drupal.org packaging script on 2024-06-19
+version: '2.0.0'
+project: 'bpmn_io'
+datestamp: 1718784267

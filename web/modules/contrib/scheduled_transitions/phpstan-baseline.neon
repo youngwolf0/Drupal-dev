@@ -1,0 +1,496 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$newRevision of method Drupal\\\\scheduled_transitions\\\\Event\\\\ScheduledTransitionsNewRevisionEvent\\:\\:setNewRevision\\(\\) expects Drupal\\\\Core\\\\Entity\\\\RevisionableInterface, Drupal\\\\Core\\\\Entity\\\\EntityInterface given\\.$#"
+			count: 1
+			path: src/EventSubscriber/ScheduledTransitionsNewRevision.php
+
+		-
+			message: "#^Variable \\$latest in PHPDoc tag @var does not match assigned variable \\$newRevision\\.$#"
+			count: 1
+			path: src/EventSubscriber/ScheduledTransitionsNewRevision.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:\\$moderation_state\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:getRevisionId\\(\\)\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\StateInterface\\:\\:isDefaultRevisionState\\(\\)\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:ajaxCallbackNewMeta\\(\\) has parameter \\$form with no type specified\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Parameter \\#1 \\$entity of method Drupal\\\\content_moderation\\\\ModerationInformationInterface\\:\\:getWorkflowForEntity\\(\\) expects Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface, Drupal\\\\Core\\\\Entity\\\\EntityInterface given\\.$#"
+			count: 3
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Parameter \\#1 \\$entity of method Drupal\\\\content_moderation\\\\StateTransitionValidationInterface\\:\\:getValidTransitions\\(\\) expects Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface, Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\|null given\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Parameter \\#2 \\$message of method Drupal\\\\Core\\\\Form\\\\FormStateInterface\\:\\:setError\\(\\) expects string, Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup given\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Parameter \\#2 \\$newRevision of method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsUtilityInterface\\:\\:generateRevisionLog\\(\\) expects Drupal\\\\Core\\\\Entity\\\\RevisionLogInterface, Drupal\\\\Core\\\\Entity\\\\EntityInterface given\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:save\\(\\) should be compatible with return type \\(int\\) of method Drupal\\\\Core\\\\Entity\\\\EntityForm\\:\\:save\\(\\)$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:save\\(\\) should be compatible with return type \\(int\\) of method Drupal\\\\Core\\\\Entity\\\\EntityFormInterface\\:\\:save\\(\\)$#"
+			count: 2
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:validateForm\\(\\) should be compatible with return type \\(Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface\\) of method Drupal\\\\Core\\\\Entity\\\\ContentEntityForm\\:\\:validateForm\\(\\)$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionAddForm\\:\\:validateForm\\(\\) should be compatible with return type \\(Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface\\) of method Drupal\\\\Core\\\\Entity\\\\ContentEntityFormInterface\\:\\:validateForm\\(\\)$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionAddForm.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Form\\\\Entity\\\\ScheduledTransitionRescheduleForm\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionRescheduleForm.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Form/Entity/ScheduledTransitionRescheduleForm.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\:\\:\\$moderation_state\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Form\\\\ScheduledTransitionForm\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(Drupal\\\\Core\\\\Entity\\\\EntityInterface\\)\\: mixed\\)\\|null, Closure\\(Drupal\\\\scheduled_transitions\\\\Entity\\\\ScheduledTransitionInterface\\)\\: \\(array\\{from_revision\\: array\\{colspan\\: 2, data\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\}, to_state\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\|string, date\\: string, author\\: array\\{data\\: array\\{'\\#theme'\\: 'username', '\\#account'\\: Drupal\\\\user\\\\UserInterface\\}\\|Drupal\\\\Core\\\\Link\\}\\|array\\{data\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\}, processed\\: array\\{data\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\}, operations\\: array\\{data\\: array\\{'\\#type'\\: 'operations', '\\#links'\\: array\\}\\}\\}\\|array\\{from_revision\\: Drupal\\\\Core\\\\Link, from_state\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\|string, to_state\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\|string, date\\: string, author\\: array\\{data\\: array\\{'\\#theme'\\: 'username', '\\#account'\\: Drupal\\\\user\\\\UserInterface\\}\\|Drupal\\\\Core\\\\Link\\}\\|array\\{data\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\}, processed\\: array\\{data\\: Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\}, operations\\: array\\{data\\: array\\{'\\#type'\\: 'operations', '\\#links'\\: array\\}\\}\\}\\) given\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Parameter \\#1 \\$scheduledTransitionStorage of method Drupal\\\\scheduled_transitions\\\\Form\\\\ScheduledTransitionForm\\:\\:getEntityQuery\\(\\) expects Drupal\\\\Core\\\\Entity\\\\RevisionableStorageInterface, Drupal\\\\Core\\\\Entity\\\\EntityStorageInterface given\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\ScheduledTransitionForm\\:\\:save\\(\\) should be compatible with return type \\(int\\) of method Drupal\\\\Core\\\\Entity\\\\EntityForm\\:\\:save\\(\\)$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Return type \\(void\\) of method Drupal\\\\scheduled_transitions\\\\Form\\\\ScheduledTransitionForm\\:\\:save\\(\\) should be compatible with return type \\(int\\) of method Drupal\\\\Core\\\\Entity\\\\EntityFormInterface\\:\\:save\\(\\)$#"
+			count: 2
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionForm.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Form\\\\ScheduledTransitionsSettingsForm\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionsSettingsForm.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Form/ScheduledTransitionsSettingsForm.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/Derivative/ScheduledTransitionsLocalActions.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/Derivative/ScheduledTransitionsLocalTasks.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Plugin\\\\Menu\\\\LocalTask\\\\ScheduledTransitionsLocalTask\\:\\:getTitle\\(\\) should return string but returns Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\.$#"
+			count: 1
+			path: src/Plugin/Menu/LocalTask/ScheduledTransitionsLocalTask.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Plugin\\\\Menu\\\\LocalTask\\\\ScheduledTransitionsLocalTask\\:\\:getTitle\\(\\) should return string but returns null\\.$#"
+			count: 1
+			path: src/Plugin/Menu/LocalTask/ScheduledTransitionsLocalTask.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/Menu/LocalTask/ScheduledTransitionsLocalTask.php
+
+		-
+			message: "#^Parameter \\#1 \\$data \\(array\\{scheduled_transition_id\\: int\\|string\\}\\) of method Drupal\\\\scheduled_transitions\\\\Plugin\\\\QueueWorker\\\\ScheduledTransitionJob\\:\\:processItem\\(\\) should be contravariant with parameter \\$data \\(mixed\\) of method Drupal\\\\Core\\\\Queue\\\\QueueWorkerInterface\\:\\:processItem\\(\\)$#"
+			count: 2
+			path: src/Plugin/QueueWorker/ScheduledTransitionJob.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/QueueWorker/ScheduledTransitionJob.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\:\\:\\$moderation_state\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionFromStateViewsField.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Plugin\\\\views\\\\field\\\\ScheduledTransitionFromStateViewsField\\:\\:query\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionFromStateViewsField.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionFromStateViewsField.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionFromStateViewsField.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\Plugin\\\\views\\\\field\\\\ScheduledTransitionRevisionLinkField\\:\\:renderLink\\(\\) should return string but returns Drupal\\\\Core\\\\StringTranslation\\\\TranslatableMarkup\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionRevisionLinkField.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionRevisionLinkField.php
+
+		-
+			message: "#^Ternary operator condition is always true\\.$#"
+			count: 1
+			path: src/Plugin/views/field/ScheduledTransitionToStateViewsField.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:getRevisionId\\(\\)\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsEntityHooks.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsEntityHooks\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsEntityHooks.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsEntityHooks\\:\\:loadByHostEntity\\(\\) should return array\\<Drupal\\\\scheduled_transitions\\\\Entity\\\\ScheduledTransitionInterface\\> but returns array\\<Drupal\\\\Core\\\\Entity\\\\EntityInterface\\>\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsEntityHooks.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsEntityHooks.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsListBuilder.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsPermissions\\:\\:create\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsPermissions.php
+
+		-
+			message: "#^Unsafe usage of new static\\(\\)\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsPermissions.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\:\\:\\$moderation_state\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsRunner.php
+
+		-
+			message: "#^\\\\Drupal calls should be avoided in classes, use dependency injection instead$#"
+			count: 1
+			path: src/ScheduledTransitionsRunner.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:getRevisionId\\(\\)\\.$#"
+			count: 2
+			path: src/ScheduledTransitionsTokenReplacements.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\EntityInterface\\:\\:getRevisionId\\(\\)\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsUtility.php
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsUtility\\:\\:getTransitions\\(\\) should return array\\<Drupal\\\\scheduled_transitions\\\\Entity\\\\ScheduledTransitionInterface\\> but returns array\\<Drupal\\\\Core\\\\Entity\\\\EntityInterface\\>\\.$#"
+			count: 1
+			path: src/ScheduledTransitionsUtility.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Database\\\\Query\\\\AlterableInterface\\:\\:conditions\\(\\)\\.$#"
+			count: 1
+			path: tests/modules/scheduled_transitions_target_revisions_test/scheduled_transitions_target_revisions_test.module
+
+		-
+			message: "#^Method Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsNonTranslatableTestEntity\\:\\:baseFieldDefinitions\\(\\) should return array\\<string, Drupal\\\\Core\\\\Field\\\\FieldDefinitionInterface\\> but returns array\\<mixed, Drupal\\\\Core\\\\Field\\\\FieldStorageDefinitionInterface\\>\\.$#"
+			count: 1
+			path: tests/modules/scheduled_transitions_test/src/Entity/ScheduledTransitionsNonTranslatableTestEntity.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Field\\\\FieldDefinitionInterface\\:\\:setTranslatable\\(\\)\\.$#"
+			count: 1
+			path: tests/modules/scheduled_transitions_test/src/Entity/ScheduledTransitionsTestEntity.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionEntityTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionEntityTransitionsFormTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemList\\) does not accept string\\.$#"
+			count: 4
+			path: tests/src/Functional/ScheduledTransitionEntityTransitionsFormTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionListTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test_revlog\\\\Entity\\\\EntityTestWithRevisionLog\\:\\:\\$moderation_state \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionListTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test_revlog\\\\Entity\\\\EntityTestWithRevisionLog\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionListTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface\\:\\:\\$moderation_state\\.$#"
+			count: 3
+			path: tests/src/Functional/ScheduledTransitionLocalTaskTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface\\:\\:\\$name\\.$#"
+			count: 2
+			path: tests/src/Functional/ScheduledTransitionLocalTaskTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 3
+			path: tests/src/Functional/ScheduledTransitionLocalTaskTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemList\\) does not accept string\\.$#"
+			count: 2
+			path: tests/src/Functional/ScheduledTransitionLocalTaskTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 4
+			path: tests/src/Functional/ScheduledTransitionModalFormTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemList\\) does not accept string\\.$#"
+			count: 2
+			path: tests/src/Functional/ScheduledTransitionModalFormTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionRescheduleFormTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 3
+			path: tests/src/Functional/ScheduledTransitionSettingsFormTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionViewsListTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test\\\\Entity\\\\EntityTestMulRev\\:\\:\\$moderation_state \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionViewsListTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test\\\\Entity\\\\EntityTestMulRev\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 1
+			path: tests/src/Functional/ScheduledTransitionViewsListTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Tests\\\\WebAssert\\:\\:assertWaitOnAjaxRequest\\(\\)\\.$#"
+			count: 3
+			path: tests/src/FunctionalJavascript/ScheduledTransitionModalFormJavascriptTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/FunctionalJavascript/ScheduledTransitionModalFormJavascriptTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemList\\) does not accept string\\.$#"
+			count: 3
+			path: tests/src/FunctionalJavascript/ScheduledTransitionModalFormJavascriptTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\:\\:\\$name\\.$#"
+			count: 3
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface\\:\\:\\$changed\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface\\:\\:\\$moderation_state\\.$#"
+			count: 4
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Access to an undefined property Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface\\:\\:\\$name\\.$#"
+			count: 3
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Entity\\\\RevisionableInterface\\:\\:getRevisionLogMessage\\(\\)\\.$#"
+			count: 3
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 12
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Method Drupal\\\\Tests\\\\scheduled_transitions\\\\Kernel\\\\ScheduledTransitionTest\\:\\:register\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$entity of method Drupal\\\\content_moderation\\\\ModerationInformationInterface\\:\\:hasPendingRevision\\(\\) expects Drupal\\\\Core\\\\Entity\\\\ContentEntityInterface, Drupal\\\\Core\\\\Entity\\\\TranslatableRevisionableInterface given\\.$#"
+			count: 2
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test_revlog\\\\Entity\\\\EntityTestWithRevisionLog\\:\\:\\$moderation_state \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 14
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test_revlog\\\\Entity\\\\EntityTestWithRevisionLog\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 8
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$moderation_state \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 4
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Property Drupal\\\\scheduled_transitions_test\\\\Entity\\\\ScheduledTransitionsTestEntity\\:\\:\\$name \\(Drupal\\\\Core\\\\Field\\\\FieldItemList\\) does not accept string\\.$#"
+			count: 5
+			path: tests/src/Kernel/ScheduledTransitionTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionsAccessControlHandlerTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionsPermissionsTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionsTokenTest.php
+
+		-
+			message: "#^Property Drupal\\\\entity_test_revlog\\\\Entity\\\\EntityTestWithRevisionLog\\:\\:\\$moderation_state \\(Drupal\\\\Core\\\\Field\\\\FieldItemListInterface\\) does not accept string\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionsTokenTest.php
+
+		-
+			message: "#^Variable \\$entity in PHPDoc tag @var does not exist\\.$#"
+			count: 1
+			path: tests/src/Kernel/ScheduledTransitionsTokenTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\workflows\\\\WorkflowTypeInterface\\:\\:addEntityTypeAndBundle\\(\\)\\.$#"
+			count: 2
+			path: tests/src/Kernel/ScheduledTransitionsUtilityTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsConfigInterface\\:\\:expects\\(\\)\\.$#"
+			count: 2
+			path: tests/src/Unit/ScheduledTransitionsCronUnitTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\scheduled_transitions\\\\ScheduledTransitionsJobsInterface\\:\\:expects\\(\\)\\.$#"
+			count: 2
+			path: tests/src/Unit/ScheduledTransitionsCronUnitTest.php
+
+		-
+			message: "#^Call to an undefined method Drupal\\\\Core\\\\Config\\\\ConfigFactoryInterface\\:\\:expects\\(\\)\\.$#"
+			count: 4
+			path: tests/src/Unit/ScheduledTransitionsEntityHooksUnitTest.php

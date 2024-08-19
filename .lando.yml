@@ -1,0 +1,4 @@
+name: empty-drupal
+recipe: drupal10
+config:
+  webroot: web

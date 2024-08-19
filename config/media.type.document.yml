@@ -1,0 +1,16 @@
+uuid: 2cc5f194-3004-44b2-b1c2-6bc5d3f7cf6a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _D9q3XSnP6ik9we9UuoTvZsQKPuYNp_G9PfwVtWzgnQ
+id: document
+label: Document
+description: 'An uploaded file or document, such as a PDF.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_document
+field_map:
+  name: name

@@ -1,0 +1,35 @@
+{
+  "name": "drupal/eca",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-module",
+  "description": "Event, Conditions, Actions - powerful, versatile, and user-friendly rules engine for Drupal",
+  "support": {
+    "issues": "https://drupal.org/project/issues/eca",
+    "source": "https://drupal.org/project/eca"
+  },
+  "repositories": {
+    "drupal.inline_entity_form": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/inline_entity_form-3431070.git"
+    },
+    "drupal.paragraphs": {
+      "type": "git",
+      "url": "https://git.drupalcode.org/issue/paragraphs-3433816.git"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-dom": "*",
+    "ext-json": "*",
+    "dragonmantank/cron-expression": "^3.1",
+    "drupal/core": "^10.3||^11",
+    "mtownsend/xml-to-array": "^2.0"
+  },
+  "require-dev": {
+    "drupal/entity_reference_revisions": "1.x-dev",
+    "drupal/inline_entity_form": "dev-project-update-bot-only",
+    "drupal/paragraphs": "dev-3433816-manual-drupal-11",
+    "drupal/token": "1.x-dev",
+    "roave/security-advisories": "dev-latest"
+  }
+}
