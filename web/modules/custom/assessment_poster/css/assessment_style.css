@@ -2,7 +2,7 @@
   padding: 3%;
   font-family: 'Helvetica', 'Arial', sans-serif;
   font-weight: bold;
-  font-size: 1.2REM;
+  font-size: 0.8REM;
 }
 
 .poster-paper .poster-date {
@@ -20,7 +20,7 @@
 .poster-container-wrapper::before {
   content: "Süddeutscher Rundfunk Stuttgart";
   display: block;
-  font-size: 0.8REM;
+  font-size: 0.6rem;
   position: absolute;
   top: -2rem;
   right: 0;
@@ -84,3 +84,25 @@
 .dark_pink {
   background-color:#b362a9;
 }
+
+
+
+@media (min-width: 768px) {
+  .poster-paper {
+    font-size: 1rem;
+  }
+
+  .poster-container-wrapper::before {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .poster-paper {
+    font-size: 1.2rem;
+  }
+  .poster-container-wrapper::before {
+    font-size: 0.8REM;
+  }
+}
+
