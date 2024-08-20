@@ -23,7 +23,8 @@
         "drupal/core-recommended": "^10.0",
         "drupal/eca": "^2.0",
         "drupal/scheduled_transitions": "^2.5",
-        "drush/drush": "^12.4"
+        "drush/drush": "^12.4",
+        "ext-dom": "*"
     },
     "require-dev": {
         "drupal/core-dev": "^10.0"

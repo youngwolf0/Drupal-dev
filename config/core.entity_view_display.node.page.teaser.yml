@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.field_test
+    - field.field.node.page.field_category
+    - field.field.node.page.field_date
+    - field.field.node.page.field_legacy_id
     - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
@@ -26,9 +28,16 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     weight: 101
     region: content
 hidden:
-  field_test: true
+  field_category: true
+  field_date: true
+  field_legacy_id: true
   layout_builder__layout: true

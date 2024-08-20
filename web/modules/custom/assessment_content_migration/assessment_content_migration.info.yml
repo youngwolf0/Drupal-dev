@@ -1,0 +1,5 @@
+name: 'Assessment Content Migration'
+type: module
+description: 'Provides a form to upload a CSV file and create content using the Batch API.'
+core_version_requirement: ^10
+package: Custom
