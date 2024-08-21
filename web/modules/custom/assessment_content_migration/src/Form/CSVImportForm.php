@@ -6,39 +6,11 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Batch\BatchBuilder;
 use Drupal\assessment_content_migration\Controller\CSVBatchProcessor;
-use Drupal\Core\Messenger\MessengerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Defines a form to upload a CSV file and process it.
  */
 class CSVImportForm extends FormBase {
-
-  /**
-   * The messenger service.
-   *
-   * @var \Drupal\Core\Messenger\MessengerInterface
-   */
-  protected $messenger;
-
-  /**
-   * Constructs a CSVImportForm object.
-   *
-   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
-   *   The messenger service.
-   */
-  public function __construct(MessengerInterface $messenger) {
-    $this->messenger = $messenger;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('messenger')
-    );
-  }
 
   /**
    * {@inheritdoc}
@@ -77,10 +49,6 @@ class CSVImportForm extends FormBase {
     $file = file_save_upload('csv_file', $validators, FALSE, 0);
 
     if ($file) {
-      $file->setPermanent();
-      $file->save();
-
-      // Get the module path using the extension service.
       $module_path = \Drupal::service('extension.list.module')->getPath('assessment_content_migration');
 
       // Set up the batch.

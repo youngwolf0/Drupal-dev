@@ -5,8 +5,6 @@ namespace Drupal\assessment_content_migration\Controller;
 use DOMDocument;
 use Drupal\node\Entity\Node;
 use Drupal\taxonomy\Entity\Term;
-use Drupal\Core\Entity\EntityStorageException;
-use Drupal\Core\Database\Database;
 
 /**
  * Batch processing class for CSV content import.
@@ -23,24 +21,24 @@ class CSVBatchProcessor {
    */
   public static function processCSV($file_uri, array &$context) {
     if (!isset($context['sandbox']['file'])) {
-      // Initialize the file handling and prepare for processing.
       $context['sandbox']['file'] = fopen($file_uri, 'r');
-      $context['sandbox']['total'] = count(file($file_uri)) - 1; // Skip the header row.
+      $context['sandbox']['total'] = count(file($file_uri)) - 1;
       $context['sandbox']['current'] = 0;
 
-      // Skip the header row.
       fgetcsv($context['sandbox']['file']);
 
-      // Preload existing legacy IDs.
+      // Preload existing legacy IDs so they can be updated.
       $context['sandbox']['existing_nodes'] = self::getExistingLegacyIds();
+      $context['results']['imported'] = 0;
+      $context['results']['updated'] = 0;
     }
 
     // Process rows until the end of the file or until a batch limit is reached.
-    $batch_limit = 10; // Set a batch limit to avoid timeouts.
+    $batch_limit = 50;
     $processed = 0;
 
     while ($processed < $batch_limit && $row = fgetcsv($context['sandbox']['file'])) {
-      // Corrected CSV fields mapping to Drupal fields.
+      // Mapping CSV columns to variables.
       $legacy_id = $row[0];
       $title = $row[1];
       $date = \DateTime::createFromFormat('m/d/Y', $row[2])->format('Y-m-d');
@@ -48,7 +46,7 @@ class CSVBatchProcessor {
       $category_name = $row[4];
       $content = $row[5];
 
-      // Sanitize content to remove JavaScript and potentially empty tags.
+      // Sanitize content to remove JavaScript.
       $content = self::sanitizeContent($content);
 
       // Handle term reference for the category.
@@ -65,34 +63,26 @@ class CSVBatchProcessor {
           'value' => $content,
           'format' => 'full_html',
         ]);
+        $context['results']['updated']++;
       }
       else {
         // Create a new node.
-        try {
-          $node = Node::create([
-            'type' => $type,
-            'title' => $title,
-            'field_legacy_id' => $legacy_id,
-            'field_date' => $date,
-            'field_category' => ['target_id' => $category_tid],
-            'body' => [
-              'value' => $content,
-              'format' => 'full_html', // Assuming full_html as the format
-            ],
-          ]);
-        }
-        catch (EntityStorageException $e) {
-          \Drupal::logger('assessment_content_migration')->error('Failed to create node: @message', ['@message' => $e->getMessage()]);
-        }
+        $node = Node::create([
+          'type' => $type,
+          'title' => $title,
+          'field_legacy_id' => $legacy_id,
+          'field_date' => $date,
+          'field_category' => ['target_id' => $category_tid],
+          'body' => [
+            'value' => $content,
+            'format' => 'full_html',
+          ],
+        ]);
+        $context['results']['imported']++;
       }
 
-      // Save the node (either newly created or updated).
-      try {
-        $node->save();
-      }
-      catch (EntityStorageException $e) {
-        \Drupal::logger('assessment_content_migration')->error('Failed to save node: @message', ['@message' => $e->getMessage()]);
-      }
+      // Save the node.
+      $node->save();
 
       // Increment the counters.
       $context['sandbox']['current']++;
@@ -124,7 +114,10 @@ class CSVBatchProcessor {
    */
   public static function finishedCallback($success, array $results, array $operations) {
     if ($success) {
-      \Drupal::messenger()->addMessage(t('The CSV import completed successfully.'));
+      \Drupal::messenger()->addMessage(t('The CSV import completed successfully. Imported @imported nodes, updated @updated nodes.', [
+        '@imported' => $results['imported'],
+        '@updated' => $results['updated'],
+      ]));
     }
     else {
       \Drupal::messenger()->addMessage(t('The CSV import encountered errors.'), 'error');
@@ -134,7 +127,7 @@ class CSVBatchProcessor {
   /**
    * Sanitize content by removing JavaScript and potentially empty tags.
    *
-   * @param string $content
+   * @param string $html
    *   The content to sanitize.
    *
    * @return string
@@ -154,7 +147,7 @@ class CSVBatchProcessor {
     }
 
     $html = $dom->saveHTML();
-    //Since the js is wrapped in p tags I will remove them now.
+    // Since the js is wrapped in p tags I will remove them now.
     $html = preg_replace('/<p>\s*<\/p>/', '', $html);
 
     return $html;
@@ -193,7 +186,7 @@ class CSVBatchProcessor {
    * Get all existing legacy IDs with their corresponding node IDs.
    *
    * @return array
-   *   An associative array where the keys are legacy IDs and the values are node IDs.
+   *   An associative array mapping legacy IDs to local node IDs.
    */
   protected static function getExistingLegacyIds() {
     $query = \Drupal::database()->select('node__field_legacy_id', 'f');
