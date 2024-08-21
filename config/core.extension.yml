@@ -3,8 +3,8 @@ _core:
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
-  assessment_poster: 0
   assessment_content_migration: 0
+  assessment_poster: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
