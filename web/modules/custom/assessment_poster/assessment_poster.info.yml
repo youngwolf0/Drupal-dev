@@ -1,6 +1,6 @@
 name: 'Assessment Poster'
 type: module
-description: 'Provides an endpoint with a CSS file attached and a custom template.'
+description: 'Provides a page showing a css recreation of a poster.'
 core_version_requirement: ^9 || ^10
 package: Custom
 dependencies: []

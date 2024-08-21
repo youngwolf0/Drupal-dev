@@ -7,7 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 /**
  * Class AssessmentPosterController.
  *
- * Provides a simple page with an attached CSS file.
+ * Provides a page showing a css recreation of a poster.
  */
 class AssessmentPosterController extends ControllerBase {
 
@@ -18,10 +18,8 @@ class AssessmentPosterController extends ControllerBase {
    *   A render array to be used with a template.
    */
   public function content() {
-    // Define the columns and their properties.
     $columns = $this->get_column_data();
 
-    // Pass the columns data to the template.
     return [
       '#theme' => 'assessment_poster_page',
       '#columns' => $columns,
@@ -203,6 +201,5 @@ class AssessmentPosterController extends ControllerBase {
 
     return $columns;
   }
-
 
 }
