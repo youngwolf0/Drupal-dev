@@ -1,0 +1,9 @@
+assessment_content_migration.csv_import_form:
+  path: '/admin/content/csv-import'
+  defaults:
+    _form: '\Drupal\assessment_content_migration\Form\CSVImportForm'
+    _title: 'CSV Content Import'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE

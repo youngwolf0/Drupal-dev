@@ -1,0 +1,23 @@
+uuid: 0eae6dba-bedf-4909-9db9-b952b8b58c0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.blog
+id: node.blog.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: blog
+label: 'Legacy id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
